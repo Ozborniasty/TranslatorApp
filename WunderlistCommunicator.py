@@ -1,7 +1,7 @@
 import requests
 import json
 
-class WunderlistCommunicator():
+class WunderCommunicator():
 
     def __init__(self):
         self.s = requests.Session()
@@ -12,9 +12,9 @@ class WunderlistCommunicator():
         self.url['root']  = 'https://a.wunderlist.com/api/v1/root'
 
         self.headers = {
-              'X-Access-Token': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-             ,'X-Client-ID': 'xxxxxxxxxxxxxxxxxxxxxxxxx'
-             ,'Content-type': 'application/json'}
+              'X-Access-Token': ''
+             ,'X-Client-ID': ''
+             ,'Content-type': ''}
 
     def getRoot(self):
         r = self.s.get(self.url['root'], headers=self.headers)
